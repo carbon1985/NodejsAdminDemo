@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Product Demo</title>
+  <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="btn btn-primary" href="/product/new">Add</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% rows.forEach(function(row) { %>
+              <%- include('product_table_row.ejs', {row: row}); %>
+              <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+        <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- 包括所有已编译的插件 -->
+        <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

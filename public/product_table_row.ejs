@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <%- row.name %>
+  </td>
+  <td>
+    <%- row.price %>
+  </td>
+  <td>
+    <a class="btn btn-warning" href=<%- "/product/modify?id=" + row._id %>>Modify</a>
+    <a class="btn btn-danger" href=<%- "/product/delete?id=" + row._id %>>Delete</a>
+  </td>
+</tr>
